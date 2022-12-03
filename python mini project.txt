@@ -1,0 +1,12 @@
+db=str(input("Enter the date of birth:"))
+cd=str(input("Enter the current date:"))
+l=len(db)
+a=db[6:11:1]
+b=cd[6:11:1]
+c=0
+for i in range(int(a),int(b)+1):
+    if((i%4==0 and i%100!=0) or (i%400==0)):
+        c=c+366
+    else:
+        c=c+365
+print("No of days lived=",c)
